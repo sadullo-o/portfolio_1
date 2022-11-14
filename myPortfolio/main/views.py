@@ -9,9 +9,9 @@ from django.db.models import Q
 from django.contrib.auth.mixins import LoginRequiredMixin
 from myPortfolio.settings import LOGIN_URL
 
-# LOGIN_URL = 'login'
 
-# Create your views here.
+
+
 @login_required(login_url='login')
 def index(request):
     infos = Info.objects.filter()
