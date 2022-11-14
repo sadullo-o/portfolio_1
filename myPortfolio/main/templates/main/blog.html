@@ -1,0 +1,51 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+
+
+<div class="container">
+<div class="input-group">
+   <form action="{% url 'search' %}" method="get">
+
+    <div class="form-outline">
+    <input type="search" name="s" id="form1" class="form-control" />
+    <label class="form-label" for="form1">Search</label>
+  </div>
+  <button type="submit" class="btn btn-primary">
+    <i class="fas fa-search"></i>
+  </button>
+    </form>
+</div>
+
+
+    {% for blog in bloglar %}
+    <div class="card">
+    <div class="card-header">
+      {{blog.title}}
+    </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>{{blog.blog}}</p>
+      <div class="blockquote-footer">{{blog.username}}</div>
+            </blockquote>
+        </div>
+    </div>
+
+   {% endfor %}
+
+
+    <form class="blog-form"  action="{% url 'blog' %}" method="post">
+         {% csrf_token %}
+
+        <input type="text" required class="form-control" name="title" placeholder="Post sarlavhasi">
+        <textarea class="form-control" required name="blog" placeholder="Post matni..."></textarea>
+         <button class="btn btn-primary"> Send </button>
+    </form>
+    {% if message %}
+    <p class="message">{{message}}</p>
+    {% endif %}
+
+</div>
+
+{% endblock %}

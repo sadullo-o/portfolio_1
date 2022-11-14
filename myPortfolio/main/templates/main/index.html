@@ -1,0 +1,78 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<!--About me-->
+<section>
+    <div class="s s-30">
+        <div class="img">
+
+    </div>
+        <img src="https://bootstrapmade.com/demo/templates/Folio/assets/img/me.jpg" alt="">
+    </div>
+    <div class="s s-70">
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci autem cupiditate eos eum libero quidem quo rem sunt ut voluptatibus.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto asperiores at consectetur delectus dolore ducimus eaque fuga fugit illum officia perspiciatis qui, quibusdam quidem, repellendus, sed tempora totam veniam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias animi beatae corporis delectus eaque esse et expedita illum maxime, minima nemo nesciunt porro quia quidem repellat sint unde vel?</p>
+    </div>
+</section>
+
+
+<!--My skills-->
+
+<div class="myskills">
+
+    {% for items in infos %}
+    <div>
+        <i class="fa-brands fa-html5"></i>
+        <h1>{{items.title}}</h1>
+        <p>{{items.content}}</p>
+    </div>
+    {% endfor %}
+
+    
+</div>
+
+
+<section class="section_about" style="padding:30px">
+<h2>About</h2>
+<hr>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+   <div class="row">
+        <div>
+        <img src="https://www.w3schools.com/w3images/team2.jpg" alt="">
+        <h2>John Doe</h2>
+        <p class="t-grey">CEO & Founder</p>
+        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        <a href="">Contact</a>
+    </div>
+
+        <div>
+        <img src="https://www.w3schools.com/w3images/team1.jpg" alt="">
+        <h2>Jane Doe</h2>
+        <p class="t-grey">Architect</p>
+        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        <a href="">Contact</a>
+    </div>
+
+        <div>
+        <img src="https://www.w3schools.com/w3images/team3.jpg" alt="">
+        <h2>Mike Ross</h2>
+        <p class="t-grey">Architect</p>
+        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        <a href="">Contact</a>
+    </div>
+
+        <div>
+        <img src="https://www.w3schools.com/w3images/team4.jpg" alt="">
+        <h2>Dan Star</h2>
+        <p class="t-grey">Architect</p>
+        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        <a href="">Contact</a>
+    </div>
+   </div>
+
+</section>
+
+
+
+{% endblock %}

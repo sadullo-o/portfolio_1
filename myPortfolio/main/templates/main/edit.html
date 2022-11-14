@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="container">
+<form method="post">
+  {% csrf_token %}
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Full Name</label>
+    <input type="text" value="{{full_name}}" name="full_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Phone number</label>
+    <input type="text" name="phone_number" value="{{phone_number}}" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword2" class="form-label">Facebook</label>
+    <input type="text" name="facebook" value="{{facebook}}" class="form-control" id="exampleInputPassword2">
+  </div>
+    <div class="mb-3">
+    <label for="exampleInputPassword4" class="form-label">Twitter</label>
+    <input type="text" name="twitter" value="{{twitter}}" class="form-control" id="exampleInputPassword4">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword3" class="form-label">Instagram</label>
+    <input type="text" name="instagram" value="{{instagram}}" class="form-control" id="exampleInputPassword3">
+  </div>
+   <div class="mb-3">
+    <label for="exampleInputPassword5" class="form-label">Rasm</label>
+    <input type="file" name="image"  class="form-control" id="exampleInputPassword5">
+  </div>
+  <div class="alert alert-danger" role="alert">
+  {{error}}
+</div>
+  <button type="submit" class="btn btn-primary">Saqlash</button>
+</form>
+</div>
+{% endblock %}

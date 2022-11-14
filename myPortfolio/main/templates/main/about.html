@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+<section class="section_about" style="padding:30px">
+<h2>About</h2>
+<hr>
+<p>{{gapinfo.malumot}}</p>
+
+   <div class="row">
+       {% for items in infos %}
+       <div>
+            <img height="200px" class="about_img" src="{{items.image.url}}" alt="">
+            <h2>{{items.name}}</h2>
+            <p class="t-grey">{{items.mansab}}</p>
+            <p>{{items.malumot}}</p>
+            <a href="">Contact</a>
+        </div>
+       {% endfor %}
+
+<!--       <img src="http://127.0.0.1:8000/media/team4.jpg" alt="">-->
+       
+
+
+   </div>
+
+</section>
+
+
+
+{% endblock %}

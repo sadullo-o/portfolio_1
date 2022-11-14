@@ -1,0 +1,58 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="card" style="width: 100%; margin: 20px 0;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card Date</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h6 class="card-subtitle mb-2 text-muted">Card author</h6>
+  </div>
+</div>
+        <div class="card" style="width: 100%; margin: 20px 0;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card Date</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h6 class="card-subtitle mb-2 text-muted">Card author</h6>
+  </div>
+</div>
+        <div class="card" style="width: 100%; margin: 20px 0;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card Date</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h6 class="card-subtitle mb-2 text-muted">Card author</h6>
+  </div>
+</div>
+        <div class="card" style="width: 100%; margin: 20px 0;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card Date</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h6 class="card-subtitle mb-2 text-muted">Card author</h6>
+  </div>
+</div>
+
+
+    <form style="margin-bottom: 20px" method="post">
+    {% csrf_token %}
+     <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Title</label>
+    <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="Title of post">
+    </div>
+    <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+    <textarea class="form-control" name="content" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+
+        <p>{{error}}</p>
+    <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+ <section class="contact" style="padding:30px">
+     <h2>Contact</h2>
+     <hr>
+     <form  action="{% url 'contact' %}" method="post">
+         {% csrf_token %}
+         <input type="text" name="name" placeholder="Ismingizni yozing...">
+         <br>
+         <input type="email" name="email" placeholder="Email pochtangizni yozing...">
+         <br>
+         <input type="text" name="subject" placeholder="Subject">
+         <br>
+         <input type="text" name="message" placeholder="Xabar qoldiring...">
+         <br>
+         <button> Send </button>
+     </form>
+
+     <p style="color:green; font-size: 30px">{{f_r}}</p>
+ </section>
+
+<!--<form action="{% url 'contact' %}" method="post">-->
+<!--         {% csrf_token %}-->
+<!--         {{ form.as_p }}-->
+<!--         <button type="submit"> Send </button>-->
+<!--     </form>-->
+{% endblock %}
