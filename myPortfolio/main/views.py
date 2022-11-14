@@ -235,3 +235,5 @@ def edit(request):
 
 
     return render(request, 'main/edit.html', context)
+
+print('success')
